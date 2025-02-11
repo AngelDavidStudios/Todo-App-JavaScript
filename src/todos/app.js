@@ -1,4 +1,4 @@
-import html from './app.html?raw ';
+import html from './app.html?raw';
 import todoStore, {Filters} from "../store/todoStore.js";
 import {renderTodos, renderPending} from "./use-cases/index.js";
 
