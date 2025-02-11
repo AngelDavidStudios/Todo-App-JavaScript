@@ -1,6 +1,6 @@
 import { Todo } from '../todos/models/todoItem.js'
 
-const Filters ={
+export const Filters ={
     All: 'all',
     Completed: 'completed',
     Pending: 'Pending'
@@ -58,7 +58,6 @@ const addTodo = (description) => {
         throw new Error('Description is required')
     }
     state.todos.push(new Todo (description))
-
     saveStore()
 }
 
@@ -87,7 +86,7 @@ const removeTodo = (id) => {
 }
 
 const removeAllCompleted = () => {
-    state.todos = state.todos.filter(todo => todo.done)
+    state.todos = state.todos.filter(todo => !todo.done)
     saveStore()
 }
 
